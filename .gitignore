@@ -10,3 +10,4 @@ node_modules/
 .vscode
 .settings
 .idea
+example-percy-java-selenium.iml
