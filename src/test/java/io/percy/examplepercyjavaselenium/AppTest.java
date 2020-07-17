@@ -27,7 +27,7 @@ import io.percy.selenium.Percy;;
  * Unit test for example App.
  */
 public class AppTest {
-    private static final String TEST_URL = "http://localhost:8000";
+    private static final String TEST_URL = "http://localhost:3000";
     private static ExecutorService serverExecutor;
     private static HttpServer server;
     private static WebDriver driver;
