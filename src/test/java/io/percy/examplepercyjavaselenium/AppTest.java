@@ -82,7 +82,7 @@ public class AppTest {
         assertEquals(1, todoEls.size());
 
         // Take a Percy snapshot specifying browser widths.
-        percy.snapshot("One todo", Arrays.asList(768, 992, 1200));
+        percy.snapshot("One todo");
     }
 
     @Test
@@ -102,6 +102,6 @@ public class AppTest {
         assertEquals("0 items left", todoCountEl.getText());
 
         // Take a Percy snapshot specifying a minimum height.
-        percy.snapshot("Checked off todo", null, 2000);
+        percy.snapshot("Checked off todo");
     }
 }
