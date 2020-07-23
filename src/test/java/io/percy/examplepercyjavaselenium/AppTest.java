@@ -73,13 +73,15 @@ public class AppTest {
         assertEquals(0, todoEls.size());
 
         // Add a todo in the browser.
-        WebElement newTodoEl = driver.findElement(By.className("new-todo"));
-        newTodoEl.sendKeys("A new fancy todo!");
-        newTodoEl.sendKeys(Keys.RETURN);
+        for (int i = 0; i < 150; i++) {
+          WebElement newTodoEl = driver.findElement(By.className("new-todo"));
+          newTodoEl.sendKeys("A new fancy todo number " + i + "!");
+          newTodoEl.sendKeys(Keys.RETURN);
+        }
 
         // Now we should have 1 todo.
         todoEls = driver.findElements(By.cssSelector(".todo-list li"));
-        assertEquals(1, todoEls.size());
+        assertEquals(150, todoEls.size());
 
         // Take a Percy snapshot specifying browser widths.
         percy.snapshot("One todo");
